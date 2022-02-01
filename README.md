@@ -19,6 +19,20 @@ const App = () =>{
 ReactDom.render(<App/>,document.getElementById('root'))
 ```
 ## جلسه 7
+
+کد جلسه قبل بدون استفاده از `jsx` بصورت زیر می شود 
+```javascript
+import React from 'react';
+import ReactDom from 'react-dom';
+
+const App = () =>{
+    return React.createElement('h1',{className:'title'},'Hello World');
+}
+
+ReactDom.render(<App/>,document.getElementById('root'))
+```
+کد در حالت زیر کار می کنه اما اگه دوبار `h1` را تکرار کنیم کار نخواد کرد. ولی اگر بین `</><>` , `<React.Fragment></React.Fragment>` ,`<div></div>` قرار بگیرد اجرا می شود 
+
 ```javascript
 import React from 'react';
 import ReactDom from 'react-dom';
@@ -29,7 +43,6 @@ const App = () =>(
 
 ReactDom.render(<App/>,document.getElementById('root'))
 ```
-کد در حالت بالا کار می کنه اما اگه دوبار `h1` را تکرار کنیم کار نخواد کرد. ولی از بین `</><>` , ` <React.Fragment></React.Fragment>` ,`<div></div>` قرار بگیرد اجرا می شود 
 برای نوشتن `class` باید از `className`  استفاده کرد.
 ```javascript
 const App = () =>(
