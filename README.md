@@ -30,3 +30,12 @@ const App = () =>(
 ReactDom.render(<App/>,document.getElementById('root'))
 ```
 کد در حالت بالا کار می کنه اما اگه دوبار `h1` را تکرار کنیم کار نخواد کرد. ولی از بین `</><>` , ` <React.Fragment></React.Fragment>` ,`<div></div>` قرار بگیرد اجرا می شود 
+برای نوشتن `class` باید از `className`  استفاده کرد.
+```javascript
+const App = () =>(
+    <div className='one'>
+            <h1>Hello mostafa</h1>
+            <h2>Hello mostafa</h2>
+    </div>
+ )
+ ```
