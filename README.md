@@ -56,3 +56,15 @@ const App = () =>(
  ## جلسه 8 
 ![8](https://raw.githubusercontent.com/Mostafaiz/react.js-doc-2022/main/image.png)
  
+برای ساخت کامپوننت `Header`
+```javascript
+import React from 'react';
+
+const Header = () =>{
+    return <div>Header Hello</div>
+}
+
+export default Header;
+```
+برای فراخوانی آن کامپونت
+`<Header/>`
