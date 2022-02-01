@@ -67,4 +67,6 @@ const Header = () =>{
 export default Header;
 ```
 برای فراخوانی آن کامپونت
-`<Header/>`
+```
+<Header/>
+```
