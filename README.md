@@ -54,5 +54,5 @@ const App = () =>(
  ```
  
  ## جلسه 8 
- !(https://raw.githubusercontent.com/Mostafaiz/react.js-doc-2022/main/image.png)
+![8](https://raw.githubusercontent.com/Mostafaiz/react.js-doc-2022/main/image.png)
  
