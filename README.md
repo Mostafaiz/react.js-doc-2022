@@ -68,5 +68,8 @@ export default Header;
 ```
 برای فراخوانی آن کامپونت
 ```
+import Header from './components/header';
+```
+```
 <Header/>
 ```
