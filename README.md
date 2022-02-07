@@ -73,3 +73,42 @@ import Header from './components/header';
 ```
 <Header/>
 ```
+
+## جلسه 9
+#### class based component 
+
+```javascript
+import React,{Component} from 'react';
+
+class Header extends Component {
+
+    render(){
+        return (
+            <div>
+                     class Component
+            </div>
+        )
+    }
+
+
+}
+
+export default Header;
+```
+
+#### function based componnent 
+```javascript
+import React from 'react';
+
+const Header = () =>{
+
+  
+    return (
+        <div>
+                 the dat is {getTheYear()}
+        </div>
+    )
+}
+
+export default Header;
+```
