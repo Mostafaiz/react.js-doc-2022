@@ -142,7 +142,7 @@ let style={
 }
 ```
 
-استفاده از css به صورت وارد کردن 
+استفاده از css به صورت وارد کردن در کنار پوشه های سورس  
 
 ```javascript
 import React from 'react';
@@ -166,7 +166,7 @@ const App = () =>(
 ReactDom.render(<App/>,document.getElementById('root'))
 ```
 
-استغده از وارد کردن css در index.html 
+استغده از وارد کردن css در  index.html به صورت در کنار فایل های public  
 ```html
 <link rel="stylesheet" type="text/css" href="style.css"/>
 
