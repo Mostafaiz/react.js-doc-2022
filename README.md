@@ -171,3 +171,25 @@ ReactDom.render(<App/>,document.getElementById('root'))
 <link rel="stylesheet" type="text/css" href="style.css"/>
 
 ```
+
+## جلسه 11
+click event 
+
+```javascript
+import React,{Component} from 'react';
+
+class Header extends Component {
+
+    render(){
+        return (
+            // <header style={style.header}>
+            <header
+            onClick={() => console.log('i was clicked')}
+            >
+            <div className='logo'>Logo</div>
+            <input></input>
+           </header>
+        )
+    } 
+}
+```
