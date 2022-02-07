@@ -193,3 +193,30 @@ class Header extends Component {
     } 
 }
 ```
+
+inputchanged event
+```javascript
+import React,{Component} from 'react';
+
+class Header extends Component {
+
+    inputChangeHandler(){
+        console.log('input changed')
+    }
+
+
+    render(){
+        return (
+
+            <header
+            // onClick={() => console.log('iwas clicked')}
+            >
+            <div className='logo'>Logo</div>
+            <input
+            onChange={this.inputChangeHandler}
+            ></input>
+           </header>
+        )
+    } 
+}
+```
