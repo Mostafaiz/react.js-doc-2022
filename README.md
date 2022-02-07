@@ -112,3 +112,62 @@ const Header = () =>{
 
 export default Header;
 ```
+
+## جلسه 10
+
+استفاده از css در درون componnent 
+```javascript
+class Header extends Component {
+
+    render(){
+        return (
+            <header style={style.header}>
+            <div className='logo'>Logo</div>
+            <input></input>
+           </header>
+        )
+    } 
+}
+
+let style={
+    header:{
+        background:"#03a9fa"
+    },
+    logo:{
+        color:'#fff',
+        fontFamily:'Anton',
+        textAlign:'center'
+    }
+    
+}
+```
+
+استفاده از css به صورت وارد کردن 
+
+```javascript
+import React from 'react';
+import ReactDom from 'react-dom';
+import Header from './components/header';
+import './styles/style.css'
+
+// const App = () =>{
+//     return React.createElement('h1',{className:'title'},'Hello World');
+// }
+
+const App = () =>(
+    <div className='one'>
+            
+            <Header/>
+
+    </div>
+ )
+
+
+ReactDom.render(<App/>,document.getElementById('root'))
+```
+
+استغده از وارد کردن css در index.html 
+```html
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+```
