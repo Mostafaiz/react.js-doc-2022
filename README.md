@@ -220,3 +220,41 @@ class Header extends Component {
     } 
 }
 ```
+## جلسه 12
+گذاشتن محتویات ورودی در یک متغیر state و نمایش آن 
+```javascript
+import React,{Component} from 'react';
+
+class Header extends Component {
+
+    state ={
+        name:'francis',
+        title:'the keyword are:',
+        keywords:'',
+        count:'',
+    }
+
+    inputChangeHandler=(event)=>{
+        this.setState({
+        keywords: event.target.value
+        })
+    }
+
+    render(){
+        return (
+
+            <header>        
+            <div className='logo'>Logo</div>
+            <input
+            onChange={this.inputChangeHandler}
+            />
+            <div>{this.state.title}</div>
+            <div>{this.state.keywords}</div>
+           </header>
+        )
+    } 
+}
+
+
+export default Header;
+```
