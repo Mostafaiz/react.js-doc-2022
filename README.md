@@ -258,3 +258,14 @@ class Header extends Component {
 
 export default Header;
 ```
+اضافه کردن دکمه شمارنده 
+```javascript
+<div>{this.state.count}</div>
+<button onClick={()=> this.addOne()}>Add One</button>  
+
+
+
+    addOne(){
+        this.setState({ count: this.state.count + 1 })
+    }
+```
