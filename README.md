@@ -16,8 +16,31 @@
  یک پکیج هست که باید از قبل نصب شده باشد بعد از نود 
  
  
- بعد با استفاده این پکیج ، نود را در پوشه خودمان نصب می کنیم . به صورت زیر 
+ بعد با استفاده این پکیج ، نود را در پوشه خودمان نصب می کنیم . به این صورت  
 ``` npx create-react-app my-app```
+
+بعد از دستور بالا کد زیر را می زنیم که وارد محیط و پوشه برنامه شویم 
+
+```
+  cd my-app
+  npm start
+```
+  البته دستورات زیر را هم می توان اجرا کرد 
+  ```
+    npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+    
+  ```
 ## جلسه 6
 ```javascript
 import React from 'react';
