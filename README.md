@@ -119,7 +119,7 @@ const App = () =>(
  
  ## جلسه 8 
 ![8](https://raw.githubusercontent.com/Mostafaiz/react.js-doc-2022/main/Screenshot%202023-02-21%20133037.png)
-![8](https://github.com/Mostafaiz/react.js-doc-2022/blob/837688bf0371688a67e321c315871c90d15a5e91/Screenshot%202023-02-21%20161942.png)
+
  
 برای ساخت کامپوننت `Header`
 ```javascript
@@ -131,6 +131,8 @@ const Header = () =>{
 
 export default Header;
 ```
+کامپوننت ها در پوشه خاص خود ایجاد می شوند 
+![8](https://github.com/Mostafaiz/react.js-doc-2022/blob/837688bf0371688a67e321c315871c90d15a5e91/Screenshot%202023-02-21%20161942.png)
 برای فراخوانی آن کامپونت
 ```
 import Header from './components/header';
