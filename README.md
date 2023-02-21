@@ -41,6 +41,27 @@
     and scripts into the app directory. If you do this, you can’t go back!
     
   ```
+  
+  برای نصب تیلویند 
+  ```
+  npm install -D tailwindcss
+npx tailwindcss init
+  ```
+  
+  tailwind.config.js را هم ویرایش می کنیم 
+  به contend کد زیر را اضافه می کنیم 
+  ```
+      "./src/**/*.{js,jsx,ts,tsx}",
+
+   ```
+   
+   
+  جهت استفاده از استایل زیر استفاده می کنیم 
+  ```
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+  ```
 ## جلسه 6
 ```javascript
 import React from 'react';
