@@ -90,6 +90,9 @@ const App = () =>{
 
 ReactDom.render(<App/>,document.getElementById('root'))
 ```
+
+اسامی ReactDom و React قابل تغییر هستند.
+
 کد در حالت زیر کار می کنه اما اگه دوبار `h1` را تکرار کنیم کار نخواد کرد. ولی اگر بین `</><>` , `<React.Fragment></React.Fragment>` ,`<div></div>` قرار بگیرد اجرا می شود 
 
 ```javascript
