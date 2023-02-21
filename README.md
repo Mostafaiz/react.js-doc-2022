@@ -171,6 +171,26 @@ export default Header;
 #### class based component 
 
 ```javascript
+import React from 'react';
+
+class Header extends React.Component {
+
+    render(){
+        return (
+            <div>
+                     class Component
+            </div>
+        )
+    }
+
+
+}
+
+export default Header;
+```
+خلاصه اش : 
+
+```javascript
 import React,{Component} from 'react';
 
 class Header extends Component {
