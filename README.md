@@ -131,14 +131,40 @@ const Header = () =>{
 
 export default Header;
 ```
-کامپوننت ها در پوشه خاص خود ایجاد می شوند 
+کامپوننت ها در پوشه خاص خود ایجاد می شوند
+
 ![8](https://github.com/Mostafaiz/react.js-doc-2022/blob/837688bf0371688a67e321c315871c90d15a5e91/Screenshot%202023-02-21%20161942.png)
-برای فراخوانی آن کامپونت
+
+news_list_item.js
+header.js
+news_list.js
+
+برای فراخوانی آن کامپونت دو خط زیر را در فایل ایندکس باید استفاده کرد 
 ```
 import Header from './components/header';
 ```
 ```
 <Header/>
+```
+
+مثال : در کد زیر  سال جاری را نمایش می دهد 
+```
+import React from 'react';
+
+const Header = () => {
+
+    const getTheYear=() => {
+        const newDate=new Date();
+        return newDate.getFullYear();
+    }
+    return (<div>
+        
+        the date is {getTheYear()}
+    </div>
+    )
+}
+
+export default Header;
 ```
 
 ## جلسه 9
