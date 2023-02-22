@@ -387,6 +387,8 @@ class Header extends Component {
 
 export default Header;
 ```
+
+
 inputchanged event with show value in consol 
 ```javascript
 import React, { Component } from 'react';
@@ -407,6 +409,37 @@ class Header extends Component {
                 <div className='logo'>Logo</div>
                 <input
                     onChange={this.inputChangeHandler}
+                ></input>
+            </header>
+        )
+    }
+}
+
+export default Header;
+```
+
+
+name va event ro chap mikone 
+```
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    inputChangeHandler(event , name) {
+        console.log(event.target.value)
+        console.log(name)
+    }
+
+
+    render() {
+        return (
+
+            <header
+            // onClick={() => console.log('iwas clicked')}
+            >
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={(e)=> this.inputChangeHandler(e,'ron')}
                 ></input>
             </header>
         )
