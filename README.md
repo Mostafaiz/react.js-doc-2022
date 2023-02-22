@@ -65,7 +65,7 @@ npx tailwindcss init
   ```
 ## جلسه 6
 
-فایل index.js
+فایل نسخه 17 index.js
 
 ```javascript
 import React from 'react';
@@ -80,6 +80,26 @@ const App = () =>{
 }
 
 ReactDom.render(<App/>,document.getElementById('root'))
+```
+فایل نسخه 18 index.js
+
+
+```javascript
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import './styles/style.css'
+
+const root = createRoot(document.getElementById('root'))
+const App = () => {
+    return (
+        <div>
+            <Header />
+        </div>
+    )
+}
+
+root.render(<App/>)
 ```
 ## جلسه 7
 
