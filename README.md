@@ -228,7 +228,9 @@ export default Header;
 
 ## جلسه 10
 
-استفاده از css در درون componnent 
+استفاده از css در درونcomponnent
+نوع نوشتن استایل ها متفاوت است.
+
 ```javascript
 class Header extends Component {
 
@@ -277,6 +279,30 @@ const App = () =>(
 
 
 ReactDom.render(<App/>,document.getElementById('root'))
+```
+
+
+```
+body {
+    margin: 0;
+}
+
+header {
+    background: #03a9fa;
+    text-align: center;
+}
+
+.logo {
+    color:#fff;
+    font-family: Anton;
+    text-align: center;
+    font-size: 40px;
+}
+
+header input {
+    font-size: 20px;
+    margin: 20px 0px;
+}
 ```
 
 استغده از وارد کردن css در  index.html به صورت در کنار فایل های public  
