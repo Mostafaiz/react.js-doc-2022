@@ -64,6 +64,9 @@ npx tailwindcss init
 @tailwind utilities;
   ```
 ## جلسه 6
+
+فایل index.js
+
 ```javascript
 import React from 'react';
 import ReactDom from 'react-dom';
