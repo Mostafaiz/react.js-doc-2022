@@ -355,6 +355,8 @@ class Header extends Component {
         )
     } 
 }
+
+export default Header;
 ```
 
 inputchanged event
@@ -382,6 +384,36 @@ class Header extends Component {
         )
     } 
 }
+
+export default Header;
+```
+inputchanged event with show value in consol 
+```javascript
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    inputChangeHandler(event) {
+        console.log(event.target.value)
+    }
+
+
+    render() {
+        return (
+
+            <header
+            // onClick={() => console.log('iwas clicked')}
+            >
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={this.inputChangeHandler}
+                ></input>
+            </header>
+        )
+    }
+}
+
+export default Header;
 ```
 ## جلسه 12
 گذاشتن محتویات ورودی در یک متغیر state و نمایش آن 
