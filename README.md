@@ -548,3 +548,70 @@ class App extends Component {
 root.render(<App/>)
 ```
 
+```
+import React from 'react';
+
+const newsList =(props) => {  //پراپس در واقع نیوز رو از ایندکس می گیره 
+    return(
+        <>
+           {props.news.map((item)=>(
+            <div key={item.id}>
+               <h3>{item.title}</h3>
+               <div>{item.feed}</div>
+            </div>
+           ))}
+
+{/*اگر بجای بالا از پایینی استفاده کنیم باید ریترن کنیم  */}
+
+
+            {/* 
+            {props.news.map((item) => {
+                return(
+                <div>
+                    <h3>{item.title}</h3>
+                    <div>{item.feed}</div>
+                </div>
+                )
+            })} */}
+
+        </>
+    )
+}
+
+export default newsList
+// در واقع این فایل می خواد یک مقداری رو برگردونه از تابع نیوز لیست
+```
+
+```
+import React from 'react';
+
+const newsList =(props) => {  //پراپس در واقع نیوز رو از ایندکس می گیره 
+    return(
+        <>
+           {props.news.map((item)=>(
+            <div key={item.id}>
+               <h3>{item.title}</h3>
+               <div>{item.feed}</div>
+            </div>
+           ))}
+
+{/*اگر بجای بالا از پایینی استفاده کنیم باید ریترن کنیم  */}
+
+
+            {/* 
+            {props.news.map((item) => {
+                return(
+                <div>
+                    <h3>{item.title}</h3>
+                    <div>{item.feed}</div>
+                </div>
+                )
+            })} */}
+
+        </>
+    )
+}
+
+export default newsList
+// در واقع این فایل می خواد یک مقداری رو برگردونه از تابع نیوز لیست
+```
