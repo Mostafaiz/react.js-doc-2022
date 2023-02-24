@@ -547,6 +547,44 @@ class App extends Component {
 
 root.render(<App/>)
 ```
+
+اضافه کردن کامپوننت نیوز لیست به صفحه اصلی و ارسال متغیر های استیت به صفحه کامپوننت ها
+```javascript
+import React, { Component } from 'react';
+import { createRoot } from 'react-dom/client';   //import ReactDom from 'react-dom';
+
+import Header from './components/header';
+import NewsList from './components/news_list'; // اسم دلبخواهی هست
+
+import './styles/style.css'
+import JSON from './db/db.json'
+
+const root = createRoot(document.getElementById('root'))
+
+class App extends Component {
+
+
+    state={
+        news: JSON
+    }
+    render(){
+        //console.log(this.state.news)   // اینجا جیسون را در استیت ریختیم 
+        return(
+        <>
+        <Header/>
+
+        
+        {/* حال باید جیسون رو بدیم به کاپوننت زیر */}
+        <NewsList 
+        news={this.state.news}
+        />
+        </>
+        )
+    }
+}
+
+root.render(<App/>)
+```
 فایل نیوز لیست یا همون کامپوننت نیوز لیست 
 ```javascript
 import React from 'react';
