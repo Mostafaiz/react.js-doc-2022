@@ -501,7 +501,7 @@ export default Header;
 
 
 صفحه اول به صورت کلاس ریترن می کنه مقدار هدر را در واقع قبلا با تابع بود الان با کلاس 
-```
+```javascript
 import React, { Component } from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from './components/header';
@@ -525,7 +525,7 @@ root.render(<App/>)
 
 اگر در کد بالا که در ایندکس دات جی اس است، جی سونی را فراخوانی کنیم و در کنسول نمایش دهیم به صورت زیر می شود . 
 
-```
+```javascript
 import React, { Component } from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from './components/header';
@@ -548,7 +548,7 @@ class App extends Component {
 root.render(<App/>)
 ```
 
-```
+```javascript
 import React from 'react';
 
 const newsList =(props) => {  //پراپس در واقع نیوز رو از ایندکس می گیره 
@@ -582,32 +582,22 @@ export default newsList
 // در واقع این فایل می خواد یک مقداری رو برگردونه از تابع نیوز لیست
 ```
 
-```
+```javascript
 import React from 'react';
 
 const newsList =(props) => {  //پراپس در واقع نیوز رو از ایندکس می گیره 
+
+    const news = props.news.map((item) => (
+        <div key={item.id}>
+            <h3>{item.title}</h3>
+            <div>{item.feed}</div>
+        </div>
+    ))
+
+
     return(
         <>
-           {props.news.map((item)=>(
-            <div key={item.id}>
-               <h3>{item.title}</h3>
-               <div>{item.feed}</div>
-            </div>
-           ))}
-
-{/*اگر بجای بالا از پایینی استفاده کنیم باید ریترن کنیم  */}
-
-
-            {/* 
-            {props.news.map((item) => {
-                return(
-                <div>
-                    <h3>{item.title}</h3>
-                    <div>{item.feed}</div>
-                </div>
-                )
-            })} */}
-
+           {news}
         </>
     )
 }
