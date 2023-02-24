@@ -497,3 +497,54 @@ export default Header;
         this.setState({ count: this.state.count + 1 })
     }
 ```
+## جلسه 13
+
+
+صفحه اول به صورت کلاس ریترن می کنه مقدار هدر را در واقع قبلا با تابع بود الان با کلاس 
+```
+import React, { Component } from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import './styles/style.css'
+
+const root = createRoot(document.getElementById('root'))
+
+class App extends Component {
+    render(){
+        return(
+        <>
+        <Header/>
+        </>
+        )
+    }
+}
+
+root.render(<App/>)
+```
+
+
+اگر در کد بالا که در ایندکس دات جی اس است، جی سونی را فراخوانی کنیم و در کنسول نمایش دهیم به صورت زیر می شود . 
+
+```
+import React, { Component } from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import './styles/style.css'
+import JSON from './db/db.json'
+
+const root = createRoot(document.getElementById('root'))
+
+class App extends Component {
+    render(){
+        console.log(JSON)
+        return(
+        <>
+        <Header/>
+        </>
+        )
+    }
+}
+
+root.render(<App/>)
+```
+
