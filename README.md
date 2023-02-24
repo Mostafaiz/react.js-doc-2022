@@ -547,7 +547,7 @@ class App extends Component {
 
 root.render(<App/>)
 ```
-
+فایل نیوز لیست یا همون کامپوننت نیوز لیست 
 ```javascript
 import React from 'react';
 
@@ -581,7 +581,7 @@ const newsList =(props) => {  //پراپس در واقع نیوز رو از ای
 export default newsList
 // در واقع این فایل می خواد یک مقداری رو برگردونه از تابع نیوز لیست
 ```
-
+خلاصه بالایی به صورت تمیز تر و مرتب تر 
 ```javascript
 import React from 'react';
 
