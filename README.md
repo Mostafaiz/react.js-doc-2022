@@ -643,3 +643,113 @@ const newsList =(props) => {  //پراپس در واقع نیوز رو از ای
 export default newsList
 // در واقع این فایل می خواد یک مقداری رو برگردونه از تابع نیوز لیست
 ```
+## جلسه 14
+
+برای اینکه هر نیوز را جدا گانه فراخوانی کنیم کد را به صورت زیر تعییر می دهیم 
+
+```
+import React from 'react';
+import NewsItem from './news_list_item';
+
+
+const newsList =(props) => {  //پراپس در واقع نیوز رو از ایندکس می گیره 
+
+
+    const news = props.news.map((item) => (
+    <NewsItem item={item} key={item.id} name="s" age="ss"/>
+    ))
+
+    return(
+        <>
+           {news}
+        </>
+    )
+}
+
+export default newsList
+// در واقع این فایل می خواد یک مقداری رو برگردونه از تابع نیوز لیست
+```
+
+و بعد کامپوننت نیوز لیست را می سازیم 
+
+```
+import React from "react";
+
+
+const NewsItem =({item}) =>{
+
+    return(
+        <div class="news_item">
+            <h3>{item.title}</h3>
+            <div>
+                {item.feed}
+            </div>
+        </div>
+
+    )
+}
+
+export default NewsItem;
+```
+
+## جلسه 15
+
+```
+import React,{Component} from "react";
+
+class Footer extends Component{
+
+    render(){
+        return(
+            <footer>
+                {this.props.footerText}
+            </footer>
+        )
+    }
+}
+
+export default Footer
+```
+
+در کامپونت بالا ویژگی پروپس در رندر ها همیشه قابل دسترس هست 
+
+```
+import React, { Component } from 'react';
+import { createRoot } from 'react-dom/client';   //import ReactDom from 'react-dom';
+
+import Header from './components/header';
+import NewsList from './components/news_list'; // اسم دلبخواهی هست
+import Footer from './components/footer';
+
+import './styles/style.css'
+import JSON from './db/db.json'
+
+const root = createRoot(document.getElementById('root'))
+
+class App extends Component {
+
+
+    state={
+        news: JSON,
+        footerText: 'i am footer'
+    }
+    render(){
+        //console.log(this.state.news)   // اینجا جیسون را در استیت ریختیم 
+        return(
+        <>
+        <Header/>
+
+        
+        {/* حال باید جیسون رو بدیم به کاپوننت زیر */}
+        <NewsList 
+        news={this.state.news}
+        />
+        <Footer footerText={this.state.footerText}/>
+        </>
+        )
+    }
+}
+
+root.render(<App/>)
+```
+در کد بالا ارسال مقدار متغیر به فوتر 
