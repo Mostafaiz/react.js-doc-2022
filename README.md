@@ -752,4 +752,54 @@ class App extends Component {
 
 root.render(<App/>)
 ```
-در کد بالا ارسال مقدار متغیر به فوتر 
+در کد بالا ارسال مقدار متغیر به فوتر
+
+کد زیر را در بالا قرار می دهیم 
+```
+const { news, footerText } = this.state ;
+```
+
+که به صورت زیر می شود 
+```javascript
+
+import React, { Component } from 'react';
+import { createRoot } from 'react-dom/client';   //import ReactDom from 'react-dom';
+
+import Header from './components/header';
+import NewsList from './components/news_list'; // اسم دلبخواهی هست
+import Footer from './components/footer';
+
+import './styles/style.css'
+import JSON from './db/db.json'
+
+const root = createRoot(document.getElementById('root'))
+
+class App extends Component {
+
+
+    state={
+        news: JSON,
+        footerText: 'i am footerrrr'
+    }
+
+    
+    render(){
+        //console.log(this.state.news)   // اینجا جیسون را در استیت ریختیم 
+        const { news, footerText } = this.state ;
+        return(
+        <>
+        <Header/>
+
+        
+        {/* حال باید جیسون رو بدیم به کاپوننت زیر */}
+        <NewsList 
+        news={news}
+        />
+        <Footer footerText={footerText}/>
+        </>
+        )
+    }
+}
+
+root.render(<App/>)
+```
