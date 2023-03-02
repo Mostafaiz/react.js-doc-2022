@@ -647,7 +647,7 @@ export default newsList
 
 برای اینکه هر نیوز را جدا گانه فراخوانی کنیم کد را به صورت زیر تعییر می دهیم 
 
-```
+```javascript
 import React from 'react';
 import NewsItem from './news_list_item';
 
@@ -672,7 +672,7 @@ export default newsList
 
 و بعد کامپوننت نیوز لیست را می سازیم 
 
-```
+```javascript
 import React from "react";
 
 
@@ -694,7 +694,7 @@ export default NewsItem;
 
 ## جلسه 15
 
-```
+```javascript
 import React,{Component} from "react";
 
 class Footer extends Component{
@@ -713,7 +713,7 @@ export default Footer
 
 در کامپونت بالا ویژگی پروپس در رندر ها همیشه قابل دسترس هست 
 
-```
+```javascript
 import React, { Component } from 'react';
 import { createRoot } from 'react-dom/client';   //import ReactDom from 'react-dom';
 
@@ -755,11 +755,12 @@ root.render(<App/>)
 در کد بالا ارسال مقدار متغیر به فوتر
 
 کد زیر را در بالا قرار می دهیم 
-```
+```javascript
 const { news, footerText } = this.state ;
 ```
 
-که به صورت زیر می شود 
+که به صورت زیر می شود
+مزایای این تغییر این است که دیگر نیاز نیست this.state را بنویسیم همیشه 
 ```javascript
 
 import React, { Component } from 'react';
