@@ -804,3 +804,24 @@ class App extends Component {
 
 root.render(<App/>)
 ```
+## جلسه 16
+برای گذاشتن children ، در قسمت نیوز کد را به صورت زیر تغییر می دهیم 
+
+```javascript
+        <NewsList 
+        news={news}
+        >
+       <br/>
+       <h1>i am children</h1>
+            </NewsList>
+```
+
+و در کامپوننت نیوز ، {props.children} را اضافه می کنیم .  
+```javascript
+    return(
+        <>
+           {news}
+           {props.children}
+        </>
+    )
+```
