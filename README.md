@@ -826,7 +826,7 @@ root.render(<App/>)
     )
 ```
 
-#جلسه 16 
+## جلسه 17 
 دو کد زیر با م برابر اند در استایل دهی 
 ```javascript
 import React, { Component } from 'react';
@@ -868,7 +868,7 @@ let style={
 export default Header;
 ```
 
-```javascripts
+```javascript
 import React, { Component } from 'react';
 
 class Header extends Component {
@@ -902,4 +902,16 @@ class Header extends Component {
 
 
 export default Header;
+```
+
+
+دو راه نوشتن دستور if 
+```javascript
+        if(this.state.active){
+            //true
+        }else{
+            //false
+        }
+
+        this.state.active ? '':''
 ```
