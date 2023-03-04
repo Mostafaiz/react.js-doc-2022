@@ -992,3 +992,43 @@ class Header extends Component {
 
 export default Header;
 ```
+کد بالا رو به کد زیر تغییر می دهیم که نوشتن متن در تکس باکس ، کلاس هدر به اکتیو و نات اکتیو تغییر می کند .
+```javascript
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    state = {
+        active : 'active',
+        keywords: '',
+
+    }
+
+    inputChangeHandler = (event) => {
+        const value =event.target.value === ''?'active' : 'not-active';
+        this.setState({
+            active:value,
+            keywords: event.target.value
+        })
+    }
+
+    render() {
+
+        return (
+
+            // <header style={{background:`${this.state.active ?'red':'green'}`}}>
+            <header className={this.state.active}>
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={this.inputChangeHandler}
+                />
+                {this.state.keywords}
+
+            </header>
+        )
+    }
+}
+
+
+export default Header;
+```
