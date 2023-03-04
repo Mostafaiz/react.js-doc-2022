@@ -825,3 +825,81 @@ root.render(<App/>)
         </>
     )
 ```
+
+#جلسه 16 
+دو کد زیر با م برابر اند در استایل دهی 
+```javascript
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    state = {
+        active : false,
+        keywords: '',
+
+    }
+
+    inputChangeHandler = (event) => {
+        this.setState({
+            keywords: event.target.value
+        })
+    }
+
+    render() {
+        return (
+
+            <header style={style.background}>
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={this.inputChangeHandler}
+                />
+                {this.state.keywords}
+
+            </header>
+        )
+    }
+}
+
+let style={
+    background: {
+        background:'green'
+    }
+}
+export default Header;
+```
+
+```javascripts
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    state = {
+        active : false,
+        keywords: '',
+
+    }
+
+    inputChangeHandler = (event) => {
+        this.setState({
+            keywords: event.target.value
+        })
+    }
+
+    render() {
+        return (
+
+            <header style={{background:'red'}}>
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={this.inputChangeHandler}
+                />
+                {this.state.keywords}
+
+            </header>
+        )
+    }
+}
+
+
+export default Header;
+```
