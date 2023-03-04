@@ -915,3 +915,41 @@ export default Header;
 
         this.state.active ? '':''
 ```
+
+در کد زیر اگر اکتیو ترو بود رنگ قرمز اگر فالس بود رنگ سبز
+```javascript
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    state = {
+        active : false,
+        keywords: '',
+
+    }
+
+    inputChangeHandler = (event) => {
+        this.setState({
+            keywords: event.target.value
+        })
+    }
+
+    render() {
+
+        return (
+
+            <header style={{background:`${this.state.active ?'red':'green'}`}}>
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={this.inputChangeHandler}
+                />
+                {this.state.keywords}
+
+            </header>
+        )
+    }
+}
+
+
+export default Header;
+```
