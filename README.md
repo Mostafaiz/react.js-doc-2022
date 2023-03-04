@@ -953,3 +953,42 @@ class Header extends Component {
 
 export default Header;
 ```
+در کد زیر اگر ولیو خالی بود مقدار اکتیو فالس می شود . و اگر پر بود مقدار اکتیو ترو می شود. 
+```javascript
+import React, { Component } from 'react';
+
+class Header extends Component {
+
+    state = {
+        active : false,
+        keywords: '',
+
+    }
+
+    inputChangeHandler = (event) => {
+        const value =event.target.value === ''?false : true;
+        this.setState({
+            active:value,
+            keywords: event.target.value
+        })
+    }
+
+    render() {
+
+        return (
+
+            <header style={{background:`${this.state.active ?'red':'green'}`}}>
+                <div className='logo'>Logo</div>
+                <input
+                    onChange={this.inputChangeHandler}
+                />
+                {this.state.keywords}
+
+            </header>
+        )
+    }
+}
+
+
+export default Header;
+```
