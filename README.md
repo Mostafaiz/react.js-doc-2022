@@ -9,6 +9,7 @@ https://github.com/ferlobo1985/udmy-React-fullstack-01basics-project.
  npm -v 
  yarn -v
  npx -v 
+ npm list react 
  
 ```
 
