@@ -297,6 +297,38 @@ bundled.clean
 bundled.baseData
 ```
 
+
+قراردادن عبارات در JSX
+
+در مثال زیر، ما یک متغیر به نام name تعریف می‌کنیم و سپس با قراردادن آن بین دو آکولاد، از آن در JSX استفاده می‌کنیم
+
+
+```javascript
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+```
+
+
+شما می‌توانید هر عبارت جاوااسکریپت معتبری را بین آکولادها در JSX قرار دهید. برای مثال، 2 + 2، user.firstName یا formatName(user)، همه عبارات معتبر جاوااسکریپت هستند.
+
+در مثال زیر، ما نتیجه صدازدن یک تابع جاوااسکریپت به نام formatName(user) را درون یک المنت <h1> قرار می‌دهیم.
+ 
+ ```javascript
+ function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+ ```
 ## جلسه 7
 
 کد جلسه قبل بدون استفاده از `jsx` بصورت زیر می شود 
