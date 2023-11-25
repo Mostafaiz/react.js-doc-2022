@@ -8,7 +8,7 @@ https://github.com/ferlobo1985/udmy-React-fullstack-01basics-project.
  node -v
  npm -v 
  yarn -v
- npx -v 
+ npx -v             //  npm install -g npm@10.2.4
  npm list react      // یادم نیست:)
  
 ```
