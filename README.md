@@ -9,7 +9,7 @@ https://github.com/ferlobo1985/udmy-React-fullstack-01basics-project.
  npm -v 
  yarn -v
  npx -v 
- npm list react 
+ npm list react      // یادم نیست:)
  
 ```
 
@@ -21,6 +21,9 @@ https://github.com/ferlobo1985/udmy-React-fullstack-01basics-project.
  بعد با استفاده این پکیج ، نود را در پوشه خودمان نصب می کنیم . به این صورت  
 ``` npx create-react-app my-app```
 
+کد زیر اما برای نصب یک فریم ورک از ری اکت هست . 
+
+``` npx create-next-app@latest```
 بعد از دستور بالا کد زیر را می زنیم که وارد محیط و پوشه برنامه شویم 
 
 ```
